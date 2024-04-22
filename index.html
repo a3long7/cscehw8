@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Fun for Kids</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  .sample-exercise {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sample, .exercise {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  form {
+    margin-top: 20px;
+  }
+  h2 {
+    color: #4CAF50;
+  }
+  input[type="text"], textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Home</h1>
+</header>
+
+<div class="content">
+  <h2>Welcome to Math Fun for Kids!</h2>
+  <div class="sample-exercise">
+    <div class="sample">
+      <h3>Sample</h3>
+      <p>2 + 2 = ?</p>
+      <p>Answer: 4</p>
+    </div>
+    <div class="exercise">
+      <h3>Exercise</h3>
+      <p>5 x 5 = ?</p>
+      <form id="exerciseForm">
+        <input type="text" id="exerciseAnswer" placeholder="Enter your answer">
+        <input type="submit" value="Submit">
+      </form>
+      <p id="exerciseResult"></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2024 Math Fun for Kids</p>
+</footer>
+
+<script>
+document.getElementById('exerciseForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var answer = document.getElementById('exerciseAnswer').value;
+  if (answer == 25) {
+    document.getElementById('exerciseResult').innerText = "Correct! Good job!";
+  } else {
+    document.getElementById('exerciseResult').innerText = "Incorrect. Try again!";
+  }
+});
+</script>
+
+</body>
+</html>
